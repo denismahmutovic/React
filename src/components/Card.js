@@ -8,7 +8,7 @@ export const Card = ({image,name,occcupation}) => {
   return (
     <div className="card">
   <div className="container">
-    
+    <p>proba neka</p>
     <h4><b>{name}</b></h4>
     <p>{occcupation}</p>
   </div>
