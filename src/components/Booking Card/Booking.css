@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    margin: 2rem auto;
+    padding: 1rem;
+    width: 60%;
+    height: 15rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 1px solid #c6c6c6;;
+    border-radius: 3px;
+  }
+  
+  .container:hover {
+    background-color: #ebf3ff;
+  }
+  
+  .img {
+    width: 32%;
+    height: 90%;
+    border-radius: 6px;
+    object-fit: cover;
+    margin-top: 10px;
+  }
+  
+  .hero {
+    padding: 0.5rem;
+    width: 60%;
+    height: 90%;
+    overflow: auto;
+  }
+  .naslov {
+    color: #0071c2; 
+  }
+  
+  .under {
+    color: #0071c2;
+    text-decoration: underline;
+    padding-top: 11px;
+  }
+  
+  .buttons {
+    width: 15%;
+    height: 100%;
+    overflow: auto;
+    text-align: right;
+    color: #0c0ca8;
+    font-weight: bolder;
+    margin-top: 1rem;
+  }
+  
+  .ocena {
+    color: #ffffff;
+    background-color: #252580;
+    padding-left: 0.2rem;
+    padding-right: 0.4rem;
+    padding-top: 1px;
+    border-radius: 22%;
+    font-size: 19px;
+    font-weight: 500;
+    border-bottom-left-radius: 0px;
+    padding-bottom: 3px;
+    margin: 5px;
+  }
+  
+  .under2 {
+    color:rgb(107, 107, 107);
+    font-size: 15px;
+    font-weight: 400;
+    position: relative;
+    right: 15px;
+    top: 3px;
+  }
+  .button {
+    margin-top: 0.7rem;
+    cursor: pointer;
+    
+    background-color: #0071c2;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem;
+    border: solid 0px;
+    font-weight: 600;
+    transition: 00.3s;  
+    margin-top: 50px;  
+  }
+.text{
+    color: rgb(38, 38, 38);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    padding-top: 15px;
+}
+.dobar{
+   color: rgb(38, 38, 38);
+   font-size: 19px;
+   font-weight: 500;
+}
+.km{
+    position: relative;
+    left: 250px;
+    bottom: 18px;
+    color: #262626;
+    font-size: 14px;
+    font-weight: 500;
+
+}
