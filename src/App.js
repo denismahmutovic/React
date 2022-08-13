@@ -10,13 +10,14 @@ import { Card } from "./components/Card/Card";
 //         image={"https://www.w3schools.com/howto/img_avatar.png"}
 //         name="Joe Dop"
 //         occcupation="Softer ingener"
+//         verification
 //       ></Card>
 
 //       <Card
 //         image={"https://www.w3schools.com/howto/img_avatar2.png"}
 //         name="Laura Mamati"
 //         occcupation="Softer ingener"
-//         verification
+//         verification={true}
 //       />
 //       <Card
 //         image={
@@ -24,7 +25,7 @@ import { Card } from "./components/Card/Card";
 //         }
 //         name="Laura Mamati"
 //         occcupation="Softer ingener"
-//         verification
+//         offvefication
 //       />
 //     </div>
 //   );
@@ -73,18 +74,76 @@ import { Card } from "./components/Card/Card";
 //   return
 // };
 
-const people = [
-  "Creola Katherine Johnson: mathematician",
-  "Mario José Molina-Pasquel Henríquez: chemist",
-  "Mohammad Abdus Salam: physicist",
-  "Percy Lavon Julian: chemist",
-  "Subrahmanyan Chandrasekhar: astrophysicist",
+// const people = [
+//   "Creola Katherine Johnson: mathematician",
+//   "Mario José Molina-Pasquel Henríquez: chemist",
+//   "Mohammad Abdus Salam: physicist",
+//   "Percy Lavon Julian: chemist",
+//   "Subrahmanyan Chandrasekhar: astrophysicist",
+// ];
+// const App = () => {
+//   return (
+//     <div className="card-container">
+//       {people.map((el) => (
+//         <p>{el}</p>
+//       ))}
+//     </div>
+//   );
+// };
+
+const Hotels = [
+  {
+    image:
+      "https://cf.bstatic.com/xdata/images/hotel/square600/301241299.webp?k=266cd60d23dc30576cbe365f346a82958173234f6c0aa4340ba44fc1bbbcf112&o=&s=1",
+    naziv: "Marea Hotel & Spa",
+    city: "Neum",
+    distance: 0.6,
+    deskripcija:
+      "Marea Hotel & Spa je objekat sa impresivnim panoramskim pogledom na more, u kojem gosti mogu da uživaju u moderno opremljenim sobama i suite jedinicama ili u baru u foajeu uz omiljeni koktel i ukusnu...",
+    recenzije: 591,
+    mark: 9.2,
+    location: 8.9,
+  },
+  {
+    image:
+      "https://cf.bstatic.com/xdata/images/hotel/square600/301241299.webp?k=266cd60d23dc30576cbe365f346a82958173234f6c0aa4340ba44fc1bbbcf112&o=&s=1",
+    naziv: "Marea Hotel & Spa",
+    city: "Neum",
+    distance: 0.6,
+    deskripcija:
+      "Marea Hotel & Spa je objekat sa impresivnim panoramskim pogledom na more, u kojem gosti mogu da uživaju u moderno opremljenim sobama i suite jedinicama ili u baru u foajeu uz omiljeni koktel i ukusnu...",
+    recenzije: 591,
+    mark: 9.2,
+    location: 8.9,
+  },
+
+  {
+    image:
+      "https://cf.bstatic.com/xdata/images/hotel/square600/301241299.webp?k=266cd60d23dc30576cbe365f346a82958173234f6c0aa4340ba44fc1bbbcf112&o=&s=1",
+    naziv: "Marea Hotel & Spa",
+    city: "Neum",
+    distance: 0.6,
+    deskripcija:
+      "Marea Hotel & Spa je objekat sa impresivnim panoramskim pogledom na more, u kojem gosti mogu da uživaju u moderno opremljenim sobama i suite jedinicama ili u baru u foajeu uz omiljeni koktel i ukusnu...",
+    recenzije: 591,
+    km: 9.2,
+    lokacija: 8.9,
+  },
 ];
+
 const App = () => {
+  // const Well = ItemCard.filter((hotel) => hotel.mark > 7);
   return (
     <div className="card-container">
-      {people.map((p) => (
-        <span>{p}</span>
+      {Hotels.map((hotel, index) => (
+        <Booking
+          key={index}
+          image={hotel.image}
+          naziv={hotel.naziv}
+          km={hotel.km}
+          lokacija={hotel.lokacija}
+          deskripcija={hotel.deskripcija}
+        />
       ))}
     </div>
   );
