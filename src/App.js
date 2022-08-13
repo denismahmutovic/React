@@ -81,71 +81,96 @@ import { Card } from "./components/Card/Card";
 //   "Percy Lavon Julian: chemist",
 //   "Subrahmanyan Chandrasekhar: astrophysicist",
 // ];
+
+// const Hotels = [
+//   {
+//     image:
+//       "https://cf.bstatic.com/xdata/images/hotel/square600/301241299.webp?k=266cd60d23dc30576cbe365f346a82958173234f6c0aa4340ba44fc1bbbcf112&o=&s=1",
+//     naziv: "Marea Hotel & Spa",
+//     city: "Neum",
+//     distance: 0.6,
+//     deskripcija:
+//       "Marea Hotel & Spa je objekat sa impresivnim panoramskim pogledom na more, u kojem gosti mogu da uživaju u moderno opremljenim sobama i suite jedinicama ili u baru u foajeu uz omiljeni koktel i ukusnu...",
+//     recenzije: 591,
+//     mark: 9.2,
+//     location: 8.9,
+//     km: 6.2,
+//   },
+//   {
+//     image:
+//       "https://cf.bstatic.com/xdata/images/hotel/square600/301241299.webp?k=266cd60d23dc30576cbe365f346a82958173234f6c0aa4340ba44fc1bbbcf112&o=&s=1",
+//     naziv: "Marea Hotel & Spa",
+//     city: "Neum",
+//     distance: 0.6,
+//     deskripcija:
+//       "Marea Hotel & Spa je objekat sa impresivnim panoramskim pogledom na more, u kojem gosti mogu da uživaju u moderno opremljenim sobama i suite jedinicama ili u baru u foajeu uz omiljeni koktel i ukusnu...",
+//     recenzije: 591,
+//     mark: 9.2,
+//     location: 8.9,
+//     km: 8.2,
+//   },
+
+//   {
+//     image:
+//       "https://cf.bstatic.com/xdata/images/hotel/square600/301241299.webp?k=266cd60d23dc30576cbe365f346a82958173234f6c0aa4340ba44fc1bbbcf112&o=&s=1",
+//     naziv: "Marea Hotel & Spa",
+//     city: "Neum",
+//     distance: 0.6,
+//     deskripcija:
+//       "Marea Hotel & Spa je objekat sa impresivnim panoramskim pogledom na more, u kojem gosti mogu da uživaju u moderno opremljenim sobama i suite jedinicama ili u baru u foajeu uz omiljeni koktel i ukusnu...",
+//     recenzije: 591,
+//     km: 9.2,
+//     lokacija: 8.9,
+//   },
+// ];
+
 // const App = () => {
+//   const welRatedhotels = Hotels.filter((el) => el.recenzije > 7.5);
 //   return (
 //     <div className="card-container">
-//       {people.map((el) => (
-//         <p>{el}</p>
+//       {welRatedhotels.map((hotel, index) => (
+//         <Booking
+//           key={index}
+//           image={hotel.image}
+//           naziv={hotel.naziv}
+//           km={hotel.km}
+//           lokacija={hotel.lokacija}
+//           deskripcija={hotel.deskripcija}
+//           recenzija={hotel.recenzije}
+//         />
 //       ))}
 //     </div>
 //   );
 // };
+// export default App;
 
-const Hotels = [
-  {
-    image:
-      "https://cf.bstatic.com/xdata/images/hotel/square600/301241299.webp?k=266cd60d23dc30576cbe365f346a82958173234f6c0aa4340ba44fc1bbbcf112&o=&s=1",
-    naziv: "Marea Hotel & Spa",
-    city: "Neum",
-    distance: 0.6,
-    deskripcija:
-      "Marea Hotel & Spa je objekat sa impresivnim panoramskim pogledom na more, u kojem gosti mogu da uživaju u moderno opremljenim sobama i suite jedinicama ili u baru u foajeu uz omiljeni koktel i ukusnu...",
-    recenzije: 591,
-    mark: 9.2,
-    location: 8.9,
-  },
-  {
-    image:
-      "https://cf.bstatic.com/xdata/images/hotel/square600/301241299.webp?k=266cd60d23dc30576cbe365f346a82958173234f6c0aa4340ba44fc1bbbcf112&o=&s=1",
-    naziv: "Marea Hotel & Spa",
-    city: "Neum",
-    distance: 0.6,
-    deskripcija:
-      "Marea Hotel & Spa je objekat sa impresivnim panoramskim pogledom na more, u kojem gosti mogu da uživaju u moderno opremljenim sobama i suite jedinicama ili u baru u foajeu uz omiljeni koktel i ukusnu...",
-    recenzije: 591,
-    mark: 9.2,
-    location: 8.9,
-  },
+// const App = () => {
+//   return (
+//     <Toolbar
+//       onPlayMovie={() => alert("playing")}
+//       onUploadimage={() => alert("upload")}
+//     />
+//   );
+// };
 
-  {
-    image:
-      "https://cf.bstatic.com/xdata/images/hotel/square600/301241299.webp?k=266cd60d23dc30576cbe365f346a82958173234f6c0aa4340ba44fc1bbbcf112&o=&s=1",
-    naziv: "Marea Hotel & Spa",
-    city: "Neum",
-    distance: 0.6,
-    deskripcija:
-      "Marea Hotel & Spa je objekat sa impresivnim panoramskim pogledom na more, u kojem gosti mogu da uživaju u moderno opremljenim sobama i suite jedinicama ili u baru u foajeu uz omiljeni koktel i ukusnu...",
-    recenzije: 591,
-    km: 9.2,
-    lokacija: 8.9,
-  },
-];
+// function Toolbar({ onPlayMovie, onUploadimage }) {
+//   return (
+//     <div>
+//       <button onClick={onPlayMovie}>onPlayMovie</button>
+//       <button onClick={onUploadimage}>onUpload image</button>
+//     </div>
+//   );
+// }
 
-const App = () => {
-  // const Well = ItemCard.filter((hotel) => hotel.mark > 7);
-  return (
-    <div className="card-container">
-      {Hotels.map((hotel, index) => (
-        <Booking
-          key={index}
-          image={hotel.image}
-          naziv={hotel.naziv}
-          km={hotel.km}
-          lokacija={hotel.lokacija}
-          deskripcija={hotel.deskripcija}
-        />
-      ))}
-    </div>
-  );
-};
-export default App;
+// export default App;
+
+function Button({ onClick, children }) {
+  return <button onClick={onClick}>{children}</button>;
+}
+
+function PlayButton({ movieName }) {
+  function handeplayClick() {
+    alert(`playing${movieName}`);
+  }
+  return <button onClick={handeplayClick}>play "{movieName}"</button>;
+}
