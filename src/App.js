@@ -165,12 +165,29 @@ import { Card } from "./components/Card/Card";
 // export default App;
 
 function Button({ onClick, children }) {
-  return <button onClick={onClick}>{children}</button>;
+  return (
+    <button
+      onClick={(e) => {
+        e.stopPropagation();
+        onClick();
+      }}
+    >
+      {children}
+    </button>
+  );
 }
 
-function PlayButton({ movieName }) {
-  function handeplayClick() {
-    alert(`playing${movieName}`);
-  }
-  return <button onClick={handeplayClick}>play "{movieName}"</button>;
-}
+const Toolbar = () => {
+  return (
+    <div
+      className="Toolbar"
+      onClick={() => {
+        alert("You clicked on the toolbar!");
+      }}
+    >
+      <Button onClick={() => alert("Playing!")}>Play Movie</Button>
+      <Button onClick={() => alert("Uploading!")}>Upload Image</Button>
+    </div>
+  );
+};
+export default Toolbar;
