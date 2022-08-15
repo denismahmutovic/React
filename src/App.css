@@ -1,7 +1,7 @@
 *{
  
   text-align: center;
-  
+
  
 }
 .card-container {
@@ -22,3 +22,8 @@
   .card-container{
     flex-direction: column;
   } */
+  .Toolbar{
+    background-color: red;
+    width: 199px;
+    height: 200px;
+  }

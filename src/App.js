@@ -2,6 +2,8 @@ import React from "react";
 import "./App.css";
 import Booking from "./components/Booking Card/Booking";
 import { Card } from "./components/Card/Card";
+import Greting from "./components/Greeting/Greting";
+import Increment from "./Increments/Increment";
 
 // const App = () => {
 //   return (
@@ -164,30 +166,55 @@ import { Card } from "./components/Card/Card";
 
 // export default App;
 
-function Button({ onClick, children }) {
-  return (
-    <button
-      onClick={(e) => {
-        e.stopPropagation();
-        onClick();
-      }}
-    >
-      {children}
-    </button>
-  );
-}
+// function Button({ onClick, children }) {
+//   return (
+//     <button
+//       onClick={(e) => {
+//         e.stopPropagation();
+//         onClick();
+//       }}
+//     >
+//       {children}
+//     </button>
+//   );
+// }
 
-const Toolbar = () => {
+// const Toolbar = () => {
+//   return (
+//     <div
+//       className="Toolbar"
+//       onClick={() => {
+//         alert("You clicked on the toolbar!");
+//       }}
+//     >
+//       <Button onClick={() => alert("Playing!")}>Play Movie</Button>
+//       <Button onClick={() => alert("Uploading!")}>Upload Image</Button>
+//     </div>
+//   );
+// };
+// export default Toolbar;
+
+const App = () => {
+  const [count, setCount] = React.useState(0);
+
+  const SayHello = (name) => {
+    alert(`hello${name}`);
+  };
+  const handleClick = () => {
+    setCount((prev) => prev + 1);
+  };
+
   return (
-    <div
-      className="Toolbar"
-      onClick={() => {
-        alert("You clicked on the toolbar!");
-      }}
-    >
-      <Button onClick={() => alert("Playing!")}>Play Movie</Button>
-      <Button onClick={() => alert("Uploading!")}>Upload Image</Button>
+    <div className="card-container">
+      <button onClick={() => SayHello("John")}>Click me </button>
+      {count}
+      <button onClick={handleClick}>click</button>
+      <Increment />
+
+      {/* <Greting name={"denis"} handleClick={handleClick}/>
+      <Greting name={"Aldin"} />
+      <Greting  */}
     </div>
   );
 };
-export default Toolbar;
+export default App;

@@ -1,21 +1,27 @@
-import React from 'react'
+import React from "react";
 
+const Greting = ({ name, children, fontSize, handleClick }) => {
+  const SayWelcome = (name) => {
+    alert(`welcome ${name}`);
+  };
 
+  return (
+    <>
+      {children}
 
-const Greting = ({name,children,fontSize})=>{
-    return(
-        <> 
-        {children}
-        
-        <h3 style={{
-            color:"red",
-            fontSize: fontSize,
-            textDecoration:"underline"
+      {/* <h3
+        style={{
+          color: "red",
+          fontSize: fontSize,
+          textDecoration: "underline",
         }}
-        >Hello,{name}</h3>
-        <p>how are you</p>
-        </>
-    )
-
-}
-export default Greting
+        onClick={() => SayWelcome(name)}
+      >
+        Hello,{name}
+      </h3>
+      <p>how are you</p> */}
+      <button onClick={handleClick}>Child components</button>
+    </>
+  );
+};
+export default Greting;
