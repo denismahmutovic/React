@@ -4,6 +4,7 @@ import Booking from "./components/Booking Card/Booking";
 import { Card } from "./components/Card/Card";
 import Greting from "./components/Greeting/Greting";
 import Increment from "./components/Increments/Increment";
+import Title from "./components/Title";
 
 // const App = () => {
 //   return (
@@ -208,6 +209,7 @@ const App = () => {
 
       <Greting name={"denis"} />
       <Greting name={"Aldin"} />
+      <Title />
     </div>
   );
 };
