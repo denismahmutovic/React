@@ -3,7 +3,7 @@ import "./App.css";
 import Booking from "./components/Booking Card/Booking";
 import { Card } from "./components/Card/Card";
 import Greting from "./components/Greeting/Greting";
-import Increment from "./Increments/Increment";
+import Increment from "./components/Increments/Increment";
 
 // const App = () => {
 //   return (
@@ -195,25 +195,19 @@ import Increment from "./Increments/Increment";
 // export default Toolbar;
 
 const App = () => {
-  const [count, setCount] = React.useState(0);
+  // const [count, setCount] = React.useState(0);
 
-  const SayHello = (name) => {
-    alert(`hello${name}`);
-  };
   const handleClick = () => {
-    setCount((prev) => prev + 1);
+    alert("Ova se funkcija nalazi u App.js");
   };
-
   return (
     <div className="card-container">
-      <button onClick={() => SayHello("John")}>Click me </button>
-      {count}
-      <button onClick={handleClick}>click</button>
-      <Increment />
+      {/* <button onClick={() => SayHello("John")}>Click me </button>
+      {count} */}
+      {/* <button onClick={handleClick}>click</button> */}
 
-      {/* <Greting name={"denis"} handleClick={handleClick}/>
+      <Greting name={"denis"} />
       <Greting name={"Aldin"} />
-      <Greting  */}
     </div>
   );
 };

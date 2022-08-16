@@ -1,14 +1,13 @@
-import React from 'react'
-import "./Title.css"
+import React from "react";
+import "./Title.css";
+import { Increment } from "./Increments/Increment";
 
-const Title = ({name,age}) => {
-    
+const Title = ({ name, age, clickHandler }) => {
   return (
-    <h3> zdravo {name},imam {age} godina </h3>
-  )
-}
+    <>
+      <h3 onClick={clickHandler}></h3>; /
+    </>
+  );
+};
 
-export default Title
-
-
-
+export default Title;
