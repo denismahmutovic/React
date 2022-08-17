@@ -5,7 +5,7 @@ import { Card } from "./components/Card/Card";
 import Greting from "./components/Greeting/Greting";
 import Increment from "./components/Increments/Increment";
 import Title from "./components/Title";
-
+import SlideClick from "./components/SlideClick/NextClick";
 // const App = () => {
 //   return (
 //     <div className="card-container">
@@ -207,9 +207,11 @@ const App = () => {
       {count} */}
       {/* <button onClick={handleClick}>click</button> */}
 
-      <Greting name={"denis"} />
+      {/* <Greting name={"denis"} />
       <Greting name={"Aldin"} />
       <Title />
+      <Increment /> */}
+      <SlideClick />
     </div>
   );
 };
