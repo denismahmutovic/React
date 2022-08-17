@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Booking from "./components/Booking Card/Booking";
 import { Card } from "./components/Card/Card";
@@ -195,23 +195,75 @@ import SlideClick from "./components/SlideClick/NextClick";
 // };
 // export default Toolbar;
 
-const App = () => {
-  // const [count, setCount] = React.useState(0);
+// const App = () => {
+//   // const [count, setCount] = React.useState(0);
+//   // const handleClick = () => {
+//   //   alert("Ova se funkcija nalazi u App.js");
+//   // };
+//   // return (
+//   //   <div className="card-container">
+//   //     {" "}
+//   //     {/* <button onClick={() => SayHello("John")}>Click me </button>
+//   //     {count} */}
+//   //     {/* <button onClick={handleClick}>click</button> */}
+//   //     {/* <Greting name={"denis"} />
+//   //     <Greting name={"Aldin"} />
+//   //     <Title />
+//   //     <Increment /> */}
+//   //     <SlideClick />
+//   //   </div>
+//   // );
+// };
+// export default App;
 
-  const handleClick = () => {
-    alert("Ova se funkcija nalazi u App.js");
-  };
+const App = () => {
+  // const [name, setName] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [hobi, setHobi] = useState("");
+
+  const [formValues, setFormValues] = useState({
+    name: "",
+    email: "",
+    hobi: "",
+    passwrod: "",
+  });
   return (
     <div className="card-container">
-      {/* <button onClick={() => SayHello("John")}>Click me </button>
-      {count} */}
-      {/* <button onClick={handleClick}>click</button> */}
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          console.log(`NAME${}`);
+        }}
+      >
+        <label htmlFor="html">name</label>
+        <input
+          type="text"
+          id="html"
+          name="fav_langagu"
+          value={name}
+          onChange={(event) => setFormValues(prev=>({
+            ...prev,
+            name:e.target.value
+          }) )}
+        />
 
-      {/* <Greting name={"denis"} />
-      <Greting name={"Aldin"} />
-      <Title />
-      <Increment /> */}
-      <SlideClick />
+        <br />
+        <label htmlFor="css">email</label>
+        <input
+          type="text"
+          id="css"
+          name="fav_language"
+          value={email}
+          onChange={(event) => setFormValues(event.target.value)}
+        />
+
+        <br />
+        <label htmlFor="javascript">hobi</label>
+        <input type="text" id="javascript" name="fav_language" />
+        <br />
+        <br />
+        <input type="submit" defaultValue="Submit" />
+      </form>
     </div>
   );
 };
