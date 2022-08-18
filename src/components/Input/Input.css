@@ -1,0 +1,60 @@
+/* *{
+    box-sizing: border-box;
+    
+}
+.fb{
+    color: #1877f2;
+    padding: 10px;
+    font-size: 30px;
+}
+.container-input{
+
+    
+    padding-top: 60px;
+    align-items: center;
+    border: solid 2px grey;
+    width: 30%;
+    height: 40vh;
+    margin: 100px auto;
+    border-radius: 2%;
+    box-shadow:
+         inset 0 -3em 3em rgba(1,1,0,0.1),
+               0 0  0 2px rgb(255,255,255),
+               0.3em 0.3em 1em rgba(1,0,0,0.3);
+   
+
+}
+.btn{
+    border-color: #1877f2;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    width: 332px;
+    background-color: #1877f2;
+    margin-top: 20px;   
+    color: white;
+    font-size: 27px;
+  
+}
+input{
+    width: 332px;
+    
+    
+   
+}
+.lozinka{
+    color: #1877f2;
+    font-size: 14px;
+    font-weight: 500;
+    padding-top: 20px;
+}
+.btn-green{
+    background-color: #42b72a;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    width: 300px;
+    height:4vh;
+    font-size: 20px;
+    margin-top: 20px;
+} */
