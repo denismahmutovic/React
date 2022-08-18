@@ -6,6 +6,7 @@ import Greting from "./components/Greeting/Greting";
 import Increment from "./components/Increments/Increment";
 import Title from "./components/Title";
 import SlideClick from "./components/SlideClick/NextClick";
+import Input from "./components/Input/Input";
 // const App = () => {
 //   return (
 //     <div className="card-container">
@@ -216,55 +217,16 @@ import SlideClick from "./components/SlideClick/NextClick";
 // };
 // export default App;
 
-const App = () => {
-  // const [name, setName] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [hobi, setHobi] = useState("");
+// export default function App() {
+// const [name, setName] = React.useState("");
+// const [email, setEmail] = React.useState("");
+// const [hobi, setHobi] = React.useState("");
+// const [password, setPassword] = useState("");
 
-  const [formValues, setFormValues] = useState({
-    name: "",
-    email: "",
-    hobi: "",
-    passwrod: "",
-  });
+export default function App() {
   return (
-    <div className="card-container">
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          console.log(`NAME${}`);
-        }}
-      >
-        <label htmlFor="html">name</label>
-        <input
-          type="text"
-          id="html"
-          name="fav_langagu"
-          value={name}
-          onChange={(event) => setFormValues(prev=>({
-            ...prev,
-            name:e.target.value
-          }) )}
-        />
-
-        <br />
-        <label htmlFor="css">email</label>
-        <input
-          type="text"
-          id="css"
-          name="fav_language"
-          value={email}
-          onChange={(event) => setFormValues(event.target.value)}
-        />
-
-        <br />
-        <label htmlFor="javascript">hobi</label>
-        <input type="text" id="javascript" name="fav_language" />
-        <br />
-        <br />
-        <input type="submit" defaultValue="Submit" />
-      </form>
+    <div>
+      <Input />
     </div>
   );
-};
-export default App;
+}
