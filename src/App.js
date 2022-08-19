@@ -7,6 +7,8 @@ import Increment from "./components/Increments/Increment";
 import Title from "./components/Title";
 import SlideClick from "./components/SlideClick/NextClick";
 import Input from "./components/Input/Input";
+import Team from "./components/Team/Team";
+
 // const App = () => {
 //   return (
 //     <div className="card-container">
@@ -223,10 +225,74 @@ import Input from "./components/Input/Input";
 // const [hobi, setHobi] = React.useState("");
 // const [password, setPassword] = useState("");
 
-export default function App() {
+// export default function App() {
+//   return (
+//     <div>
+//       <Input />
+//     </div>
+//   );
+// }
+
+// const DATA = [
+//   "prva ucionica",
+//   "druga ucionica",
+//   "Treca ucionica",
+//   "Cettvra ucuonica",
+//   ".....",
+//   "stota ucionica",
+// ];
+
+// const App = () => {
+//   const [array, SetArray] = React.useState(DATA);
+//   const generateNewWord = () => Math.random().toString(36).slice(2, 7);
+
+//   /// KOPIJA NIZA
+
+//   const reverseArray = () => {
+//     const _array = [...array];
+//     const reversed = _array.reverse();
+//     SetArray(reversed);
+//   };
+
+//   return (
+//     <div className="card-container">
+//       <button onClick={() => SetArray((prev) => [generateNewWord(), ...prev])}>
+//         Dodaj random recenicu
+//       </button>
+//       <button onClick={reverseArray}>Reserve Recenica</button>
+//       <ul>
+//         {array.map((el) => (
+//           <li key={el}>{el}</li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// };
+// export default App;
+
+const favoriteTeams = [
+  { id: 0, name: "Aresenal", points: 6 },
+  { id: 1, name: "Man City", points: 6 },
+  { id: 2, name: "Man United", points: 2 },
+  { id: 3, name: "Liverpol", points: 9 },
+  { id: 4, name: "Real", points: 5 },
+];
+
+const App = () => {
+  const [teams, setTeams] = React.useState(favoriteTeams);
+
   return (
-    <div>
-      <Input />
+    <div className="Team-card">
+      <button onClick={()=> setTeams((prev)=>[...prev,{
+        id:Marh.random(),
+        name:"Novi Tim",
+        points:4
+      >
+      }] )}
+      {teams.map((team) => (
+        <Team name={team.name} points={team.points} />
+      ))}
     </div>
   );
-}
+};
+export default App;
