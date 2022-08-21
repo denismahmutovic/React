@@ -1,4 +1,4 @@
-*{
+/* *{
  
   text-align: center;
 
@@ -13,7 +13,7 @@
   /* flex-direction: column; */
   
   
-} */
+
   /* h5{
     display: inline-block;
     padding: 2px;
@@ -22,8 +22,9 @@
   .card-container{
     flex-direction: column;
   } */
-  .Toolbar{
+  /* .Toolbar{
     background-color: red;
     width: 199px;
     height: 200px;
-  }
+  }  */
+  

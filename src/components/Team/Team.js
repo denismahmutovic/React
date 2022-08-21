@@ -1,14 +1,13 @@
 import React from "react";
 import "./Team.css";
 
-import React from "react";
-
-export default function Team() {
+export default function Team({ name, points, onDeleteTeam }) {
+  const [array, SetArray] = React.useState();
   return (
     <div className="Team-card">
       <p>{name}</p>
-      <p>{points} points</p>
-      <button>x</button>
+      <p>{points}</p>
+      <button onClick={onDeleteTeam}>x</button>
     </div>
   );
 }

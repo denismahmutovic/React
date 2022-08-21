@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import "./App.css";
-import Booking from "./components/Booking Card/Booking";
-import { Card } from "./components/Card/Card";
-import Greting from "./components/Greeting/Greting";
-import Increment from "./components/Increments/Increment";
-import Title from "./components/Title";
-import SlideClick from "./components/SlideClick/NextClick";
-import Input from "./components/Input/Input";
-import Team from "./components/Team/Team";
+// import Booking from "./components/Booking Card/Booking";
+// import { Card } from "./components/Card/Card";
+// import Greting from "./components/Greeting/Greting";
+// import Increment from "./components/Increments/Increment";
+// import Title from "./components/Title";
+// import SlideClick from "./components/SlideClick/NextClick";
+// import Input from "./components/Input/Input";
+// import Team from "./components/Team/Team";
+import CryoptoForm from "./components/CryoptoForm/CryoptoForm";
 
 // const App = () => {
 //   return (
@@ -256,6 +257,7 @@ import Team from "./components/Team/Team";
 
 //   return (
 //     <div className="card-container">
+
 //       <button onClick={() => SetArray((prev) => [generateNewWord(), ...prev])}>
 //         Dodaj random recenicu
 //       </button>
@@ -270,29 +272,52 @@ import Team from "./components/Team/Team";
 // };
 // export default App;
 
-const favoriteTeams = [
-  { id: 0, name: "Aresenal", points: 6 },
-  { id: 1, name: "Man City", points: 6 },
-  { id: 2, name: "Man United", points: 2 },
-  { id: 3, name: "Liverpol", points: 9 },
-  { id: 4, name: "Real", points: 5 },
-];
+// const favoriteTeams = [
+//   { id: 0, name: "Aresenal", points: 6 },
+//   { id: 1, name: "Man City", points: 6 },
+//   { id: 2, name: "Man United", points: 2 },
+//   { id: 3, name: "Liverpol", points: 9 },
+//   { id: 4, name: "Real", points: 5 },
+// ];
 
-const App = () => {
-  const [teams, setTeams] = React.useState(favoriteTeams);
+// const App = () => {
+//   const [teams, setTeams] = React.useState(favoriteTeams);
+// const deleteTeam = (id) => {
+//   const newTeams = teams.filter((team) => team.id != id);
+//   setTeams(newTeams);
+// };
 
+//   return (
+//     <div className="Team-cart">
+//       <button
+//         onClick={() =>
+//           setTeams((prev) => [
+//             ...prev,
+//             { id: Math.random(), name: "novi", points: "" },
+//           ])
+//         }
+//       >
+//     dodaj novi tim
+//   </button>
+//   {teams.map((team) => (
+//     <div key={team.id}>
+//       <Team
+//         name={team.name}
+//         points={team.points}
+//         onDeleteTeam={() => deleteTeam(team.id)}
+//       />
+//     </div>
+//   ))}
+// </div>
+//   );
+// };
+// export default App;
+
+export default function App() {
   return (
-    <div className="Team-card">
-      <button onClick={()=> setTeams((prev)=>[...prev,{
-        id:Marh.random(),
-        name:"Novi Tim",
-        points:4
-      >
-      }] )}
-      {teams.map((team) => (
-        <Team name={team.name} points={team.points} />
-      ))}
+    <div>
+      {" "}
+      <CryoptoForm />
     </div>
   );
-};
-export default App;
+}
