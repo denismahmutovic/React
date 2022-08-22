@@ -1,11 +1,11 @@
 import React from "react";
 import { useState } from "react";
 import CryptoList from "./CryptoListItem/CryoptoList/CryptoList";
-import Border from "./CryptoListItem/CryptoListItem";
+import CryptoListItem from "./CryptoListItem/CryptoListItem";
 import "./CryoptoForm.css";
 const Lista = [
-  { name: "Bitcoin", value: "21,400.99" },
-  { name: "Ethereum", value: "1,624.20" },
+  { name: " Bitcoin", value: "21,400.99" },
+  { name: " Ethereum", value: "1,624.20" },
 ];
 
 const CryoptoForm = () => {
@@ -70,19 +70,13 @@ const CryoptoForm = () => {
           ADD
         </button>
       </form>
-      {/* {array.map((value) => (
-        <CryptoList
-          key={value.id}
-          name={value.name}
-          value={value.value}
-          deleteCrypto={() => deleteCrypto(value.id)}
-        />
-      ))} */}
+
       {array.map((value) => (
-        <Border
+        <CryptoListItem
           key={value.id}
           name={value.name}
           value={value.value}
+          src={value.tabela}
           deleteCrypto={() => deleteBtn(value.id)}
         />
       ))}

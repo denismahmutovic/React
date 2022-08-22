@@ -9,3 +9,16 @@
     margin-bottom: 50px;
     border-radius: 10px; */
 }  
+.btn-delete{
+    background-color: red;
+}
+.a{
+    border: 2px red solid;
+    width: 500px;
+    height: 600px;
+    position: relative;
+    left: 450px;
+    bottom: 170px;
+    z-index: 1;
+
+    }

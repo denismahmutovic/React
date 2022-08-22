@@ -9,6 +9,7 @@ import "./App.css";
 // import Input from "./components/Input/Input";
 // import Team from "./components/Team/Team";
 import CryoptoForm from "./components/CryoptoForm/CryoptoForm";
+import CryptoList from "./components/CryoptoForm/CryptoListItem/CryoptoList/CryptoList";
 
 // const App = () => {
 //   return (
@@ -316,7 +317,6 @@ import CryoptoForm from "./components/CryoptoForm/CryoptoForm";
 export default function App() {
   return (
     <div>
-      {" "}
       <CryoptoForm />
     </div>
   );

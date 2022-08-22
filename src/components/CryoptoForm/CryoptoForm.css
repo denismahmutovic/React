@@ -4,28 +4,55 @@
     padding: 0;
     background-color:#1a1a1a; 
     /* background-color: #4D6FE5; */
-
      color: white;
    }
     
-
+.glavni{
+    margin-top: 80px;
+    margin-right: 20px;
+   
+}
 .btn{
     background-color: #ff9332;
     padding: 9px 23px;
 
     border-radius: 10px;
     border: none;
-    width: 133px;
+    width: 150px;
     font-weight: 500;
+    box-shadow: 0px 4px 6px rgb(255 147 50 / 20%);
+    
+}
+.btn:hover{
+    background-color: #ffb347;
+    
 }
 input{
     width: 332px;
+    text-align: center;
+    
     margin: 3px ;
     width: 240px;
     height: 30px;
-    /* border-radius: 8px; */
+    border-radius: 10px;
     border: none;
     background-color: white;
+    color:black;
     
     
+    
+    
+}
+.btn-delete{
+    background-color: #ff9332;
+    padding: 9px 23px;
+
+    border-radius: 10px;
+    border: none;
+    width: 150px;
+    font-weight: 500;
+}
+.btn-delete:hover{
+    background-color: red;
+    /* color: red; */
 }

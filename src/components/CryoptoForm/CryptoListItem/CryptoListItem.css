@@ -1,26 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+*{
+    font-family: 'Open Sans', sans-serif;
+
+}
 p{
     background-color: #ff9332;
-    color: white;
+    color: black;
+    padding: 10px;
     
 }
 .grafikon{
     background-color: #ff9332;
+    padding: 2px;
 }
 .podela{
-    /* background-color: #eeee; */
+    
     background-color: #ff9332;
-
-   
-    width: 30vw;
+    width: 60%;
     margin-top: 50px;
     margin-bottom: 50px;
-    border-radius: 10px;   
+    
     display: flex;
     justify-content: space-around; 
     align-items: center;
+    
+    
+
 }
 .logo{
    width: 60%;
-   height: 200px;
+   height: 260px;
     
+}
+.tabela{
+    padding: 10px;
+    /* color: #6ccf59; */
+    /* color: #ff4d4d; */
+    color: red;
+    background-color:#ff44441a;
+    border-radius: 20px ;
+}
+.bela{
+    color:white;
 }
