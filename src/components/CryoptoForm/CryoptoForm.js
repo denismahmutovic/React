@@ -4,8 +4,16 @@ import CryptoList from "./CryptoListItem/CryoptoList/CryptoList";
 import CryptoListItem from "./CryptoListItem/CryptoListItem";
 import "./CryoptoForm.css";
 const Lista = [
-  { name: " Bitcoin", value: "21,400.99" },
-  { name: " Ethereum", value: "1,624.20" },
+  { id: 0, name: " Bitcoin", value: "21,400.99" },
+  { id: 1, name: " Ethereum", value: "1,624.20" },
+  { id: 2, name: "Tether", value: "1.00" },
+  { id: 3, name: "USD", value: "1.00" },
+  { id: 4, name: "BNB", value: "297.80" },
+  { id: 5, name: "Binance", value: "1.00" },
+  { id: 6, name: "XRP", value: "0.337385" },
+  { id: 7, name: "Cardano", value: "0.454453" },
+  { id: 8, name: "Solana", value: "34.93" },
+  { id: 9, name: "Dai", value: "0.999960" },
 ];
 
 const CryoptoForm = () => {
