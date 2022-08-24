@@ -1,44 +1,78 @@
 import React from "react";
 import "./CryptoListItem.css";
-import { useState } from "react";
 
-const CryptoListItem = ({ name, value, deleteCrypto, tabela }) => {
-  const [showMore, setShowMore] = useState(false);
+const CryptoListItem = ({
+  name,
+  value,
+  deleteCrypto,
+  tabela,
+  showMore,
+  showAll,
+}) => {
   return (
     <div className="border">
       <div className="podela">
-        <p> {name}</p>
-        <p className="bela"> ${value} </p>
-
-        <button
-          className="btn-show-more"
-          onClick={() => setShowMore((prev) => !prev)}
-        >
-          {!showMore ? "Show More" : "Show less"}
-        </button>
-        {showMore && (
-          <div>
-            <p className="flex">
-              Bitcoin price is $21,106.73 , down 1.93% in the last 24 hours, and
-              the live market cap is $403.7B . It has a circulating supply
-              volume of 19,128,931 BTC coins and a max. Supply volume of
-              21,000,000 BTC alongside $403.7B 24h trading volume. The addresses
-              and transactions of Bitcoin can be explored in
-              https://www.oklink.com/btc?hmsr=CS_BTC and {name}
-            </p>
-          </div>
-        )}
+        <p>{name}</p>
+        <p>$ {value}</p>
         <p className="tabela">{tabela}↓2.41%</p>
         <img
           className="grafikon"
           src={"https://static.coinstats.app/sparks/frax_1w.png"}
           alt="11"
         />
-        <button className="btn-delete" onClick={deleteCrypto}>
+        <button
+          onMouseEnter={showMore}
+          className="btn"
+          onClick={() => showMore()}
+        >
+          {!showAll ? "Show More" : "Show less"}
+        </button>
+        <button className="btn" onClick={deleteCrypto}>
           X
         </button>
       </div>
+      {showAll && (
+        <div className="">
+          <p className="showMore">
+            Cijena {name} je pala za 6,52% u posljednjih 7 dana. Cijena je
+            porasla za 0,93% u posljednja 24 sata. U samo proteklih sat vremena
+            cijena je porasla za 0,07%. Trenutna cena je {value}
+          </p>
+        </div>
+      )}
     </div>
   );
 };
+
+// return (
+//     <div className="border">
+//       <div className="podela">
+//         <p> {name}</p>
+//         <p className="bela"> ${value} </p>
+
+//         <button
+//           className="btn-show-more"
+//           <button className="btn2" onClick={() => showMore()}
+//           <button
+//         >
+//           {!showMore ? "Show More" : "Show less"}
+//         </button>
+//         {showMore && (
+//           <div>
+//             <p className="flex">jedan {name}</p>
+//           </div>
+//         )}
+//         <p className="tabela">{tabela}↓2.41%</p>
+//         <img
+//           className="grafikon"
+//           src={"https://static.coinstats.app/sparks/frax_1w.png"}
+//           alt="11"
+//         />
+//         <button className="btn-delete" onClick={deleteCrypto}>
+//           X
+//         </button>
+//       </div>
+//     </div>
+//   );
+// };
 export default CryptoListItem;

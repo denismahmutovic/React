@@ -16,13 +16,14 @@ p{
 .podela{
     
     background-color: #ff9332;
-    width: 60%;
+    width: 80%;
     margin-top: 50px;
     margin-bottom: 50px;
     
     display: flex;
     justify-content: space-around; 
     align-items: center;
+    margin-right: 200px;
     
     
 
@@ -54,6 +55,8 @@ p{
 .logo{
    width: 60%;
    height: 260px;
+   animation-name: slidein;
+  animation-iteration-count:inherit ;
     
 }
 .tabela{
@@ -67,3 +70,30 @@ p{
 .bela{
     color:white;
 }
+.showMore{
+        /* background-color: #b3b3b3;
+        color: white; */
+    width: 80%;
+    height: 14vh;
+    color: red;
+    background-color:#ff44441a; 
+    font-size: 20px;
+    font-family:fantasy;
+    color: white;
+    animation-duration: 3s;
+  /* animation-name: slidein;
+  animation-iteration-count:inherit ; */
+}
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+  
+  

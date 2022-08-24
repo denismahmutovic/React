@@ -18,6 +18,7 @@ const Lista = [
 
 const CryoptoForm = () => {
   const [array, SetArray] = useState(Lista);
+  const [showMore, setShowMore] = useState(null);
   const [nameValue, setnameValue] = useState({
     name: "",
     value: "",
@@ -36,9 +37,9 @@ const CryoptoForm = () => {
     ]);
   };
 
-  const deleteBtn = (id) => {
-    const newCryptoList = array.filter((value) => value.id !== id);
-    SetArray(newCryptoList);
+  const deletebtn = (id) => {
+    const newList = array.filter((value) => value.id !== id);
+    SetArray(newList);
   };
 
   return (
@@ -84,8 +85,17 @@ const CryoptoForm = () => {
           key={value.id}
           name={value.name}
           value={value.value}
-          src={value.tabela}
-          deleteCrypto={() => deleteBtn(value.id)}
+          showMore={() =>
+            setShowMore((prev) => {
+              if (prev === value.id) {
+                return null;
+              } else {
+                return value.id;
+              }
+            })
+          }
+          showAll={showMore === value.id}
+          deleteCrypto={() => deletebtn(value.id)}
         />
       ))}
     </div>
