@@ -315,9 +315,5 @@ import CryptoList from "./components/CryoptoForm/CryptoListItem/CryoptoList/Cryp
 // export default App;
 
 export default function App() {
-  return (
-    <div>
-      <CryoptoForm />
-    </div>
-  );
+  return <CryoptoForm></CryoptoForm>;
 }

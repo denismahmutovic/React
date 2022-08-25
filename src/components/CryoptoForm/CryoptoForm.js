@@ -18,7 +18,7 @@ const Lista = [
 
 const CryoptoForm = () => {
   const [array, SetArray] = useState(Lista);
-  const [showMore, setShowMore] = useState(null);
+  const [showMore, setShowMore] = useState();
   const [nameValue, setnameValue] = useState({
     name: "",
     value: "",
