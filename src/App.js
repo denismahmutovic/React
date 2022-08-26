@@ -10,7 +10,8 @@ import "./App.css";
 // import Team from "./components/Team/Team";
 import CryoptoForm from "./components/CryoptoForm/CryoptoForm";
 import CryptoList from "./components/CryoptoForm/CryptoListItem/CryoptoList/CryptoList";
-
+import WeatherCard from "./components/WeatherCard/WeatherCard";
+import Cas from "./components/Cas/Cas";
 // const App = () => {
 //   return (
 //     <div className="card-container">
@@ -315,5 +316,6 @@ import CryptoList from "./components/CryoptoForm/CryptoListItem/CryoptoList/Cryp
 // export default App;
 
 export default function App() {
-  return <CryoptoForm></CryoptoForm>;
+  // return <CryoptoForm></CryoptoForm>;
+  return <Cas />;
 }

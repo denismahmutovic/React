@@ -1,0 +1,41 @@
+.container{
+    margin: 100px auto;
+    margin-left: 550px;
+    border: 2px solid #1414fc;
+    width: 25%;
+    height: 60vh;
+    border-radius: 20px;
+   
+}
+
+.btn{
+    margin-left: 110px ;
+
+}
+
+.desk{
+    text-align: center;
+    font-size: 25px;
+    position: relative;
+    bottom: 55px;
+    text-transform: uppercase;
+    border: 1px solid #1414fc;
+    width: 20%;
+    height: 6vh;
+    margin-left: 580px;
+    text-align: center;
+    border-radius: 20px;
+    padding-top: 6px;
+    
+    
+    
+    
+} 
+.number{
+    font-size: 100px;
+    background-color: white;
+    padding-left: 120px;
+    color: #191919;
+    
+    
+} 
