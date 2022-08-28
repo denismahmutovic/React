@@ -41,9 +41,9 @@ const Cas = () => {
         ></Cas>;
         return (
           <h3>
-            {" "}
-            <p>{JSON.stringify(value.title)}</p>
-            {JSON.stringify(value.body)}
+            <p>TITLE: {value.title}</p>
+            Description:
+            {value.body}
           </h3>
         );
       })}
