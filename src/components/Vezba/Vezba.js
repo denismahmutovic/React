@@ -41,7 +41,7 @@ export const Vezba = () => {
               <p>{el.name}</p>
               <p>{el.bio}</p>
               <h3>{el.discription}</h3>
-              <h3>dd</h3>
+              <p>dd</p>
               <hr />
             </div>
           ))}
