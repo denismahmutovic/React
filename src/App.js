@@ -18,6 +18,8 @@ import axios from "axios";
 import { useEffect } from "react";
 import Paganation from "./components/Paganation/Paganation";
 import { Vezba } from "./components/Vezba/Vezba";
+import { Material } from "./components/Material/Material";
+
 // const App = () => {
 //   return (
 //     <div className="card-container">
@@ -385,7 +387,8 @@ import { Vezba } from "./components/Vezba/Vezba";
 export default function App() {
   return (
     <div>
-      <Vezba />
+      {" "}
+      <Material />
     </div>
   );
 }
