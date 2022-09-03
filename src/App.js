@@ -17,7 +17,7 @@ import "./App.css";
 import axios from "axios";
 import { useEffect } from "react";
 import Paganation from "./components/Paganation/Paganation";
-import { Vezba } from "./components/Vezba/Vezba";
+import Vezba from "./components/Vezba/Vezba";
 import { Material } from "./components/Material/Material";
 
 // const App = () => {
@@ -387,8 +387,7 @@ import { Material } from "./components/Material/Material";
 export default function App() {
   return (
     <div>
-      {" "}
-      <Material />
+      <Vezba />
     </div>
   );
 }
