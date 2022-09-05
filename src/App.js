@@ -15,11 +15,13 @@ import "./App.css";
 // import PostList from "./components/PostsList/PostList";
 
 import axios from "axios";
-import { useEffect } from "react";
+
 import Paganation from "./components/Paganation/Paganation";
 import Vezba from "./components/Vezba/Vezba";
 import { Material } from "./components/Material/Material";
-
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
+import Box from "@mui/material/Box";
 // const App = () => {
 //   return (
 //     <div className="card-container">
@@ -384,10 +386,26 @@ import { Material } from "./components/Material/Material";
 // }
 //paginacija
 
-export default function App() {
+function App() {
   return (
     <div>
-      <Vezba />
+      <Box
+        component="form"
+        sx={{
+          "& > :not(style)": { m: 1, width: "25ch" },
+        }}
+        noValidate
+        autoComplete="off"
+      >
+        <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+        <TextField id="filled-basic" label="Filled" variant="filled" />
+        <TextField id="standard-basic" label="Standard" variant="standard" />
+        <Button variant="outlined" color="secondary">
+          Hello World
+        </Button>
+        <Button disabled>Disabled</Button>
+      </Box>
     </div>
   );
 }
+export default App;
