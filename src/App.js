@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import "./App.css";
 // import Booking from "./components/Booking Card/Booking";
 // import { Card } from "./components/Card/Card";
@@ -386,26 +387,39 @@ import Box from "@mui/material/Box";
 // }
 //paginacija
 
-function App() {
+// function App() {
+//   return (
+//     <div>
+//       <Box
+//         component="form"
+//         sx={{
+//           "& > :not(style)": { m: 1, width: "25ch" },
+//         }}
+//         noValidate
+//         autoComplete="off"
+//       >
+//         <TextField id="outlined-basic" label="name" variant="name" />
+//         <TextField id="filled-basic" label="Filled" variant="filled" />
+//         <TextField id="standard-basic" label="Standard" variant="standard" />
+//         <Button variant="outlined" color="secondary">
+//           Hello World
+//         </Button>
+//         <Button disabled>Disabled</Button>
+//       </Box>
+//     </div>
+//   );
+// }
+// export default App;
+
+import { Header } from "./components/Project/Header";
+import Search from "./components/Project/Search";
+import { ThemeProvider } from "@mui/material/styles";
+import { Container } from "@mui/material/";
+
+export default function App() {
   return (
-    <div>
-      <Box
-        component="form"
-        sx={{
-          "& > :not(style)": { m: 1, width: "25ch" },
-        }}
-        noValidate
-        autoComplete="off"
-      >
-        <TextField id="outlined-basic" label="Outlined" variant="outlined" />
-        <TextField id="filled-basic" label="Filled" variant="filled" />
-        <TextField id="standard-basic" label="Standard" variant="standard" />
-        <Button variant="outlined" color="secondary">
-          Hello World
-        </Button>
-        <Button disabled>Disabled</Button>
-      </Box>
-    </div>
+    <Container>
+      <Header />
+    </Container>
   );
 }
-export default App;
