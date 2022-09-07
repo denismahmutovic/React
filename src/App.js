@@ -411,15 +411,25 @@ import Box from "@mui/material/Box";
 // }
 // export default App;
 
-import { Header } from "./components/Project/Header";
-import Search from "./components/Project/Search";
-import { ThemeProvider } from "@mui/material/styles";
-import { Container } from "@mui/material/";
+// import { Header } from "./components/Project/Header";
+// import Search from "./components/Project/Search";
+// import { ThemeProvider } from "@mui/material/styles";
+// import { Container, createMuiThem } from "@mui/material/";
+
+// export default function App() {
+//   return (
+//     <Container>
+//       <Header />
+//     </Container>
+//   );
+// }
 
 export default function App() {
   return (
-    <Container>
-      <Header />
-    </Container>
+    <div>
+      <h1>dsdsa</h1>
+    </div>
   );
 }
+
+// rauter
