@@ -23,7 +23,9 @@ import { Material } from "./components/Material/Material";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
+import Routerr from "./components/Routerr/Routerr";
 // const App = () => {
+
 //   return (
 //     <div className="card-container">
 //       <Card
@@ -424,12 +426,26 @@ import Box from "@mui/material/Box";
 //   );
 // }
 
+// export default function App() {
+//   return (
+//     <div>
+//       <Routerr />
+//     </div>
+//   );
+// }
+
+// rauter
+
+import { Routes, Route, Link, NavLink } from "react-router-dom"; // router hvata sve rute
+
 export default function App() {
   return (
-    <div>
-      <h1>dsddsadsa</h1>
+    <div className="App">
+      <h1>Welcome to React Router!</h1>
+      <Routes>
+        <Route path="/" element={<h1>jedan</h1>} />
+        <Route path="about" element={<h1>dvas</h1>} />
+      </Routes>
     </div>
   );
 }
-
-// rauter
