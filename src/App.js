@@ -477,7 +477,7 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="about" element={<h1>ABOUT PAGE</h1>} />
+        <Route path="about" element={<h1>abaut Page</h1>} />
         <Route path="team" element={<TeamPage />} />
       </Routes>
     </div>
