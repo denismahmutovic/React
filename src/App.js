@@ -23,7 +23,7 @@ import { Material } from "./components/Material/Material";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
-import Routerr from "./components/Routerr/Routerr";
+
 // const App = () => {
 
 //   return (
@@ -436,15 +436,49 @@ import Routerr from "./components/Routerr/Routerr";
 
 // rauter
 
-import { Routes, Route, Link, NavLink } from "react-router-dom"; // router hvata sve rute
+import BottomNavigation from "@mui/material/BottomNavigation";
+
+import { Routes, Route, Link, NavLink } from "react-router-dom";
+import HomePage from "./components/Routerr/HomePage";
+import TeamPage from "./components/Routerr/TeamPage";
 
 export default function App() {
+  let activeStyle = {
+    textDecoration: "underline",
+    color: "blue",
+  };
+
+  let activeClassName = "underline";
+
   return (
-    <div className="App">
+    <div className="card-container">
       <h1>Welcome to React Router!</h1>
+      <BottomNavigation showLabels>
+        <NavLink
+          className={({ isActive }) => (isActive ? activeClassName : undefined)}
+          to="/"
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        >
+          <h4>Home </h4>
+        </NavLink>
+        <NavLink
+          to="/about"
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        >
+          <h4>About </h4>
+        </NavLink>
+        <NavLink
+          to="/team"
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        >
+          <h4>Team </h4>
+        </NavLink>
+      </BottomNavigation>
+
       <Routes>
-        <Route path="/" element={<h1>jedan</h1>} />
-        <Route path="about" element={<h1>dvas</h1>} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="about" element={<h1>ABOUT PAGE</h1>} />
+        <Route path="team" element={<TeamPage />} />
       </Routes>
     </div>
   );
