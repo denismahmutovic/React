@@ -15,11 +15,21 @@ const steps = [
 
 export default function HomePage() {
   const navigate = useNavigate();
+  const [name, setName] = React.useState("denis");
 
   return (
     <Box sx={{ width: "100%" }}>
       HOME
-      <Button variant="contained" onClick={() => navigate("/team")}>
+      <Button
+        variant="contained"
+        onClick={() =>
+          navigate("/team", {
+            state: {
+              name,
+            },
+          })
+        }
+      >
         Go to Team
       </Button>
     </Box>
