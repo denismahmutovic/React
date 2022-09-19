@@ -437,6 +437,8 @@ import Box from "@mui/material/Box";
 // rauter
 
 import BottomNavigation from "@mui/material/BottomNavigation";
+import SingleNews from "./components/Routerr/SingleNews";
+import NewsPage from "./components/Routerr/NewsPage";
 
 import { Routes, Route, Link, NavLink } from "react-router-dom";
 import HomePage from "./components/Routerr/HomePage";
@@ -445,7 +447,7 @@ import TeamPage from "./components/Routerr/TeamPage";
 export default function App() {
   let activeStyle = {
     textDecoration: "underline",
-    color: "blue",
+    color: "red",
   };
 
   let activeClassName = "underline";
@@ -461,24 +463,19 @@ export default function App() {
         >
           <h4>Home </h4>
         </NavLink>
+
         <NavLink
-          to="/about"
+          to="/news"
           style={({ isActive }) => (isActive ? activeStyle : undefined)}
         >
-          <h4>About </h4>
-        </NavLink>
-        <NavLink
-          to="/team"
-          style={({ isActive }) => (isActive ? activeStyle : undefined)}
-        >
-          <h4>Team </h4>
+          <h4>News </h4>
         </NavLink>
       </BottomNavigation>
 
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="about" element={<h1>abaut Page</h1>} />
-        <Route path="team" element={<TeamPage />} />
+        <Route path="news" element={<NewsPage />} />
+        <Route path="news/:id" element={<SingleNews />} />
       </Routes>
     </div>
   );
