@@ -444,7 +444,19 @@ import { Routes, Route, Link, NavLink } from "react-router-dom";
 import HomePage from "./components/Routerr/HomePage";
 import TeamPage from "./components/Routerr/TeamPage";
 
+import { createContext } from "react";
+
+export const UserContext = createContext();
+
 export default function App() {
+  const [user, setUser] = React.useState({
+    name: "",
+    email: "",
+    address: "",
+  });
+
+  const value = { user, setUser };
+
   let activeStyle = {
     textDecoration: "underline",
     color: "red",
@@ -471,12 +483,13 @@ export default function App() {
           <h4>News </h4>
         </NavLink>
       </BottomNavigation>
-
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="news" element={<NewsPage />} />
-        <Route path="news/:id" element={<SingleNews />} />
-      </Routes>
+      <UserContext.Provider value={value}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="news" element={<NewsPage />} />
+          <Route path="news/:id" element={<SingleNews />} />
+        </Routes>
+      </UserContext.Provider>
     </div>
   );
 }
