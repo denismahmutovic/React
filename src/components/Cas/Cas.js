@@ -20,7 +20,7 @@ const Cas = () => {
       <button onClick={() => setResourceType("users")}>users</button>
       <button onClick={() => setResourceType("comments")}>comments</button> */}
       <h1>{resourcrType}</h1>
-      <h1>title</h1>
+      <h1>titlee</h1>
       {array.map((value) => {
         <Cas
           key={value.id}
