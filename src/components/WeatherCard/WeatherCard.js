@@ -23,7 +23,7 @@ const WeatherCard = () => {
       setDesk("");
     }
     document.getElementsByTagName("body")[0].style.backgroundColor =
-      backgroundColor;
+      backgroundColor
   };
 
   return (
