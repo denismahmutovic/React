@@ -10,7 +10,7 @@ const WeatherCard = () => {
   const changeColor = () => {
     const randomNumber = Math.floor(Math.random() * 55) - 10;
     setWeather(randomNumber);
-    let backgroundColor = "";
+    let backgroundColor = ""
 
     if (randomNumber < 4) {
       backgroundColor = "#00CCFF";
